@@ -18,12 +18,11 @@ def predict():
     # Ambil data dari form input
     try:
         features = [
-            float(request.form['feature1']),  # Sesuaikan dengan fitur model Anda
+            float(request.form['feature1']),  
             float(request.form['feature2']),
             float(request.form['feature3']),
             float(request.form['feature4']),
             float(request.form['feature5']),
-            # Tambahkan fitur lainnya di sini
         ]
         # Prediksi harga laptop
         prediction = model.predict([features])[0]
