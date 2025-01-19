@@ -1,0 +1,23 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Arial", sans-serif;
+  /* background-image: url(../assets/bg1.jpg);
+  background-size: cover; */
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+button {
+  font-size: 1.2rem;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
