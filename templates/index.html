@@ -1,164 +1,569 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estimasi Harga Laptop</title>
-    <!-- Bootstrap CSS -->
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>Raizel Laptop</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <!-- Responsive-->
+    <link rel="stylesheet" href="static/css/responsive.css" />
+    <!-- fevicon -->
+    <link rel="icon" href="static/images/favicon.png" type="image/gif" />
+    <!-- font css -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
       rel="stylesheet"
     />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.min.css" />
+    <!-- Tweaks for older IEs-->
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
     />
-
     <link
-      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
-
-    <script src="
-    https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.all.min.js
-    "></script>
   </head>
   <body>
-    <div class="container mt-5">
-      <!-- Header -->
-      <div class="text-center mb-4">
-        <h1 class="display-4 text-primary">
-          Laptop Bekas Termurah Di Kota Serang
-        </h1>
-        <p class="lead">Pilih detail laptop Anda untuk Estimasi harganya.</p>
+    <div class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="/"
+            ><img src="static/images/logo.png" width="200"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tentang.html">Tentang</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Layanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="estimasi.html"
+                  >Estimasi Harga Laptop</a
+                >
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <div class="login_bt">
+                <a href="#"
+                  >Login
+                  <span style="color: #222222"
+                    ><i class="fa fa-user" aria-hidden="true"></i></span
+                ></a>
+              </div>
+              <div class="fa fa-search form-control-feedback"></div>
+            </form>
+          </div>
+        </nav>
       </div>
-
-      <!-- Form Input -->
-      <div class="card shadow-lg">
-        <div class="card-body">
-          <form action="/predict" method="post">
-            <!-- Dropdown untuk fitur pertama -->
-            <div class="mb-3">
-              <label for="feature1" class="form-label">Merk Laptop</label>
-              <select
-                class="form-select"
-                id="feature1"
-                name="feature1"
-                required
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+        <div class="container">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
               >
-                <option value="" selected disabled>Pilih merk laptop</option>
-                <option value="0">Asus</option>
-                <option value="1">Acer</option>
-                <option value="2">Lenovo</option>
-                <option value="3">Hp</option>
-                <option value="4">Dell</option>
-              </select>
+                01
+              </li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                02
+              </li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                03
+              </li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3">
+                04
+              </li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h1 class="banner_taital">Hp Victus 16</h1>
+                    <p class="banner_text">
+                      HP Victus: Laptop gaming bertenaga yang tidak menguras
+                      kantong. Nikmati performa mumpuni untuk game-game
+                      favoritmu dan tugas-tugas berat, tanpa harus mengorbankan
+                      budget. Masuki dunia game dengan HP Victus. Rasakan
+                      pengalaman bermain yang imersif dengan grafis yang memukau
+                      dan performa yang responsif. Saatnya taklukkan setiap
+                      tantangan.
+                    </p>
+                    <div class="started_text">
+                      <a href="#">Order Sekarang</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="banner_img">
+                      <img src="static/images/banner-img.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h1 class="banner_taital">Acer Asphire 5</h1>
+                    <p class="banner_text">
+                      Acer Aspire 5: Laptop serbaguna yang ideal untuk menemani
+                      aktivitas sehari-hari. Performa andal, desain stylish, dan
+                      harga yang bersaing, menjadikannya pilihan tepat untuk
+                      pelajar, mahasiswa, dan profesional muda.
+                    </p>
+                    <div class="started_text">
+                      <a href="#">Order Sekarang</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="banner_img">
+                      <img src="static/images/banner-img-2.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h1 class="banner_taital">Hp Pavilion x360</h1>
+                    <p class="banner_text">
+                      HP Pavilion x360 warna Rose Gold adalah laptop 2-in-1 yang
+                      menawarkan fleksibilitas dan gaya. Dengan engsel 360
+                      derajat, laptop ini dapat digunakan dalam berbagai mode,
+                      mulai dari mode laptop tradisional hingga mode tablet.
+                      Berikut beberapa poin penting mengenai HP Pavilion x360
+                      Rose Gold, berdasarkan beberapa ulasan:
+                    </p>
+                    <div class="started_text">
+                      <a href="#">Order Sekarang</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="banner_img">
+                      <img src="static/images/banner-img-3.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h1 class="banner_taital">Asus Zenbook S</h1>
+                    <p class="banner_text">
+                      Asus Zenbook S Rose Gold adalah pilihan yang tepat bagi
+                      mereka yang mencari laptop ultraportable dengan desain
+                      stylish, performa mumpuni, dan fitur lengkap. Cocok untuk
+                      profesional, pelajar, atau siapa saja yang membutuhkan
+                      perangkat yang ringkas dan mudah dibawa kemana saja tanpa
+                      mengorbankan performa.
+                    </p>
+                    <div class="started_text">
+                      <a href="#">Order Sekarang</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="banner_img">
+                      <img src="static/images/banner-img-4.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <!-- Dropdown untuk fitur kedua -->
-            <div class="mb-3">
-              <label for="feature2" class="form-label">Prosesor</label>
-              <select
-                class="form-select"
-                id="feature2"
-                name="feature2"
-                required
-              >
-                <option value="" selected disabled>Pilih jenis prosesor</option>
-                <option value="2.1">Intel Core i3 gen 2, 2.1 Ghz</option>
-                <option value="2.4">Intel Core i5 gen 4, 2.4 Ghz</option>
-                <option value="3.2">Intel Core i7 gen 6, 3.2 Ghz</option>
-                <option value="2.6">Intel Celeron 2.6 Ghz</option>
-                <option value="2.9">Intel Pentium D 2.9 Ghz</option>
-                <option value="2.8">AMD Sempron 2.8 Ghz</option>
-                <option value="3.6">AMD Ryzen 5 5500U, 3.6 Ghz</option>
-                <option value="4">AMD Ryzen 7 5600, 4.0 Ghz</option>
-              </select>
-            </div>
-
-            <!-- Dropdown untuk fitur ketiga -->
-            <div class="mb-3">
-              <label for="feature3" class="form-label">Kapasitas RAM</label>
-              <select
-                class="form-select"
-                id="feature3"
-                name="feature3"
-                required
-              >
-                <option value="" selected disabled>Pilih kapasitas RAM</option>
-                <option value="4">4 GB</option>
-                <option value="8">8 GB</option>
-                <option value="16">16 GB</option>
-                <option value="32">32 GB</option>
-              </select>
-            </div>
-
-            <!-- Dropdown untuk fitur keempat -->
-            <div class="mb-3">
-              <label for="feature4" class="form-label"
-                >Kapasitas Penyimpanan/Storage</label
-              >
-              <select
-                class="form-select"
-                id="feature4"
-                name="feature4"
-                required
-              >
-                <option value="" selected disabled>
-                  Pilih kapasitas Penyimpanan
-                </option>
-                <option value="128">128 GB</option>
-                <option value="256">256 GB</option>
-                <option value="512">512 GB</option>
-                <option value="1000">1 TB</option>
-              </select>
-            </div>
-
-            <!-- Dropdown untuk fitur kelima -->
-            <div class="mb-3">
-              <label for="feature5" class="form-label">Ukuran Layar</label>
-              <select
-                class="form-select"
-                id="feature5"
-                name="feature5"
-                required
-              >
-                <option value="" selected disabled>Pilih Ukuran Layar</option>
-                <option value="11.5">11.5 Inch</option>
-                <option value="12.6">12.6 Inch</option>
-                <option value="13">13 Inch</option>
-                <option value="14.5">14.5 Inch</option>
-                <option value="15.6">15.6 Inch</option>
-                <option value="16">16 Inch</option>
-              </select>
-            </div>
-
-            <!-- Tombol submit -->
-            <button type="submit" class="btn btn-primary w-100">
-              Prediksi
-            </button>
-          </form>
+          </div>
         </div>
       </div>
-
-      <!-- Prediction Result -->
-      {% if prediction_text %}
-      <div class="alert alert-success mt-4 text-center">
-        <h4>{{ prediction_text }}</h4>
-      </div>
-      {% elif error_text %}
-      <div class="alert alert-danger mt-4 text-center">
-        <h4>{{ error_text }}</h4>
-      </div>
-      {% endif %}
+      <!-- banner section end -->
     </div>
-
-    <!-- Footer -->
-    <footer class="text-center mt-5">
-      <p class="text-muted">&copy; 2025 Estimasi Harga Laptop</p>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- header section end -->
+    <!-- about sectuion start -->
+    <div class="about_section layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="about_img">
+              <img src="static/images/about-img.png" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h1 class="about_taital">Tentang Raizel Laptop</h1>
+            <p class="about_text">
+              Di Raizel Laptop, kami percaya bahwa setiap orang berhak
+              mendapatkan perangkat yang andal dan sesuai dengan kebutuhan
+              mereka. Kami hadir untuk menyediakan solusi laptop berkualitas
+              tinggi dengan layanan yang personal dan profesional. Dengan
+              pengalaman bertahun-tahun di industri ini, kami mengkurasi setiap
+              produk yang kami tawarkan, memastikan hanya laptop terbaik dari
+              merek-merek terpercaya yang tersedia untuk Anda. Lebih dari
+              sekadar menjual laptop, kami berkomitmen untuk membangun hubungan
+              jangka panjang dengan pelanggan kami. Tim ahli kami siap membantu
+              Anda memilih laptop yang tepat, memberikan saran teknis, dan
+              memberikan dukungan purna jual yang handal. Kepuasan Anda adalah
+              prioritas utama kami. Kunjungi toko kami dan rasakan sendiri
+              pengalaman berbelanja laptop yang berbeda. Raizel Laptop - Mitra
+              Terpercaya Anda dalam Teknologi.
+            </p>
+            <div class="read_bt_1"><a href="#">Baca Selengkapnya</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about sectuion end -->
+    <!-- cream sectuion start -->
+    <div class="cream_section layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="cream_taital">Laptop Best Seller</h1>
+            <p class="cream_text">Ini adalah beberapa Laptop Populer disini</p>
+          </div>
+        </div>
+        <div class="cream_section_2">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="cream_box">
+                <div class="cream_img">
+                  <img src="static/images/img-a1.png" />
+                </div>
+                <div class="price_text">IDR 6.2Jt</div>
+                <h6 class="strawberry_text">Dell Inspiron 15</h6>
+                <div class="cart_bt"><a href="#">Lihat Spesifikasi</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="cream_box">
+                <div class="cream_img">
+                  <img src="static/images/banner-img-3.png" />
+                </div>
+                <div class="price_text">IDR 11.5Jt</div>
+                <h6 class="strawberry_text">Hp Pavilion x360 RoseGold</h6>
+                <div class="cart_bt"><a href="#">Lihat Spesifikasi</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="cream_box">
+                <div class="cream_img">
+                  <img src="static/images/banner-img-2.png" />
+                </div>
+                <div class="price_text">IDR 7.4Jt</div>
+                <h6 class="strawberry_text">Acer Asphire 5</h6>
+                <div class="cart_bt"><a href="#">Lihat Spesifikasi</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cream_section_2">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="cream_box">
+                <div class="cream_img">
+                  <img src="static/images/banner-img-4.png" />
+                </div>
+                <div class="price_text">IDR 9.8Jt</div>
+                <h6 class="strawberry_text">Asus Zenbook S RoseGold</h6>
+                <div class="cart_bt"><a href="#">Lihat Spesifikasi</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="cream_box">
+                <div class="cream_img">
+                  <img src="static/images/banner-img.png" />
+                </div>
+                <div class="price_text">IDR 12Jt</div>
+                <h6 class="strawberry_text">Hp Victus 16</h6>
+                <div class="cart_bt"><a href="#">Lihat Spesifikasi</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="cream_box">
+                <div class="cream_img">
+                  <img src="static/images/img-a2.png" />
+                </div>
+                <div class="price_text">IDR 8.9Jt</div>
+                <h6 class="strawberry_text">Lenovo ThinkPad X1 Carbon</h6>
+                <div class="cart_bt"><a href="#">Lihat Spesifikasi</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="seemore_bt"><a href="#">Lihat Selengkanya</a></div>
+      </div>
+    </div>
+    <!-- cream sectuion end -->
+    <!-- testimonial section start -->
+    <div class="testimonial_section layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="testimonial_taital">Testimonial</h1>
+          </div>
+        </div>
+        <div class="testimonial_section_2">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="testimonial_box">
+                <div
+                  id="main_slider"
+                  class="carousel slide"
+                  data-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <p class="testimonial_text">
+                        "Saya sangat puas dengan pelayanan di Raizel Laptop.
+                        Awalnya saya bingung memilih laptop yang cocok untuk
+                        kebutuhan kuliah saya. Staff di sana sangat sabar
+                        menjelaskan perbedaan spesifikasi dan merekomendasikan
+                        beberapa pilihan yang sesuai budget saya. Proses
+                        pembelian juga cepat dan mudah. Terima kasih Raizel
+                        Laptop!"
+                      </p>
+                      <h4 class="client_name">Rina</h4>
+                      <div class="client_img">
+                        <img
+                          style="max-width: 150px"
+                          src="static/images/client-img-2.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <p class="testimonial_text">
+                        "Saya mencari laptop dengan spesifikasi lumayan untuk
+                        kerja tapi budget terbatas. Setelah survei ke beberapa
+                        toko, akhirnya saya menemukan Raizel Laptop. Harga yang
+                        ditawarkan sangat kompetitif, bahkan lebih murah dari
+                        toko lain untuk tipe laptop yang sama. Kualitas barang
+                        juga oke. Recommended banget!"
+                      </p>
+                      <h4 class="client_name">Andi</h4>
+                      <div class="client_img">
+                        <img
+                          style="max-width: 150px"
+                          src="static/images/client-img-3.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <p class="testimonial_text">
+                        "Awalnya saya ragu karena Raizel Laptop toko baru. Tapi
+                        setelah melihat langsung laptopnya, saya langsung jatuh
+                        hati. Build quality laptopnya bagus, spesifikasinya
+                        sesuai dengan yang diiklankan, dan yang paling penting,
+                        performanya memuaskan. Saya sudah pakai beberapa bulan
+                        dan tidak ada masalah sama sekali. Puas banget belanja
+                        di Raizel Laptop!"
+                      </p>
+                      <h4 class="client_name">Nina</h4>
+                      <div class="client_img">
+                        <img
+                          style="max-width: 150px"
+                          src="static/images/client-img-1.jpg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev"
+                    href="#main_slider"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#main_slider"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <i class="fa fa-angle-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- testimonial section end -->
+    <!-- contact section start -->
+    <div class="contact_section layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="contact_main">
+              <h1 class="contact_taital">Contact Us</h1>
+              <form action="/action_page.php">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="email-bt"
+                    placeholder="Nama"
+                    name="Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="email-bt"
+                    placeholder="Email"
+                    name="Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="email-bt"
+                    placeholder="No Telp"
+                    name="Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="massage-bt"
+                    placeholder="Pesan"
+                    rows="5"
+                    id="comment"
+                    name="Massage"
+                  ></textarea>
+                </div>
+              </form>
+              <div class="main_bt"><a href="#">Kirim</a></div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="location_text">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span class="padding_left_10 active"
+                      ><i class="fa fa-map-marker" aria-hidden="true"></i></span
+                    >Kota Serang, Banten, ID</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="padding_left_10"
+                      ><i class="fa fa-phone" aria-hidden="true"></i></span
+                    >Telp/Wa : +62 878 8181 0411
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="padding_left_10"
+                      ><i class="fa fa-envelope" aria-hidden="true"></i></span
+                    >Email : raizellaptop@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mail_main">
+              <h3 class="newsletter_text">Newsletter</h3>
+              <div class="form-group">
+                <textarea
+                  class="update_mail"
+                  placeholder="Enter Your Email"
+                  rows="5"
+                  id="comment"
+                  name="Enter Your Email"
+                ></textarea>
+                <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+              </div>
+            </div>
+            <div class="footer_social_icon">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-facebook" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-twitter" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-linkedin" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- contact section end -->
+    <!-- copyright section start -->
+    <div class="copyright_section">
+      <div class="container">
+        <p class="copyright_text">
+          2020 All Rights Reserved. Design by
+          <a href="https://html.design">Free Html Templates</a> Distribution by
+          <a href="https://themewagon.com">ThemeWagon</a>
+        </p>
+      </div>
+    </div>
+    <!-- copyright section end -->
+    <!-- Javascript files-->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/jquery-3.0.0.min.js"></script>
+    <script src="static/js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="static/js/custom.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- javascript -->
   </body>
 </html>
